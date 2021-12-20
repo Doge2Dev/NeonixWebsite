@@ -1,0 +1,52 @@
+/*button animation*/
+#button
+{
+    width: 256px;
+    height: 128px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 16px 14px 20px rgb(14, 13, 13);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button:before
+{
+    content: "";
+    background-image: conic-gradient(
+        rgb(255, 255, 255) 20deg,
+        transparent 120deg
+    );
+    width: 150%;
+    height: 700%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+#button:after
+{ 
+    content: "Download Game";
+    font-size: 25px;
+    width: 240px;
+    height: 114px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
