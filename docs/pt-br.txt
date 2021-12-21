@@ -1,0 +1,114 @@
+[Documentação arquivos NXMI]
+
+Autor : ChocolateLoxtl_ [DEV]
+Atualizado : 18/12/2021
+
+[Tópicos]
+
+[1] - Introdução
+[2] - Estrutura de informações
+[3] - Comandos dinamicos
+	{1} - channelCount
+	{2} - channelColorSleep
+	{3} - channelTransitionType
+[4] - Definindo cores
+
+____________________________________________________________
+
+
+[1] - Introdução
+
+O Arquivo NXMI e um arquivo baseado na arquitetura de arquivos do windows o "INI", sua sintaxe e a mesma do formato mas está atribuido a coisas relacionadas ao jogo. Ele foi criado para ter mais ter informações principais em mapas no jogo Neonix!
+Isso inclui coisas escritas pelos proprios usuarios do jogo.
+
+o nome NXMI vem da sigla pra Neonix Map Information
+
+
+
+___________________________________________________________
+
+
+
+[2] - Estrutura de informações
+
+A estrutura de informações desse arquivos se baseia em 2 grupos principais:
+
+[nxmi] e [nxmap]
+
+o grupo que tem o nome do formato (nxmi) guarda informações sobre o mapa em si
+
+mapName : Nome do mapa
+author : Autor do mapa
+songName : Nome da musica
+
+Esses 3 valores (string) ficam no grupo NXMI.
+
+O grupo NXMAP guarda informações sobre o mapa
+
+initSpeed : Velocidade do jogador ao iniciar o mapa
+initGamemode : Modo de jogo do jogador ao iniciar o mapa (0 = Modo normal, 1 = modo Floater)
+
+
+
+___________________________________________________________
+
+
+
+[3] - Comandos dinamicos
+
+Além de guardar essas informações, o NXMI pode guardar e executar comandos pré-definidos que funcionam como gatilho
+
+
+
+	{channelCount} : Sintaxe [channelCount=(numero tipo int)]
+
+
+	guarda a quantidade de canais de cor que o mapa tem
+	Ex: 5 canais de cor, esse comando deve ter a mesma quantidade de canais de cor
+
+
+	{channelColorSleep} : Sintaxe [channelColorSleep=(numero tipo int)]
+
+	comando que espera um tempo (em milissegundos) pra trocar de canal de cor
+	OBS: Esse comando só funciona caso o comando channelTransitionType tiver valor igual a "timer"
+
+
+	{channelTransitionType} : Sintaxe [channelTransitionType=(texto tipo string)]
+
+
+	comando aguarda o tipo de transição, os comandos validos são timer, death, orbcheck.
+
+
+	timer : Funciona em conjunto com comando channelColorSleep e muda o canal de cor no tempo definido (em milissegundos)
+
+	death : Ativa quando o jogador morrer, ao detectar uma morte do jogador ele troca o canal de cor
+
+	orbcheck : Parecido com o "death", ele ativa quando o jogador usa uma "orb" de "boost"
+
+
+
+___________________________________________________________
+
+
+
+[4] - Definindo cores
+
+Para definir uma cor, deve ser seguida a seguinte estrutura
+
+[id_color]
+r=red
+g=green
+b=blue
+
+Dentro dos colchetes deve conter um numero, referente ao "ID" do canal de cor
+abaixo desses colchetes deve conter esses valores de R G e B, contendo numero inteiros de 0 a 255
+
+ex: 
+	[2]
+	r=255
+	g=255
+	b=255
+
+___________________________________________________________
+
+
