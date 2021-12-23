@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+#navbar
+{
+    overflow: hidden;
+    float: center;
+}
+
+#navbar a 
+{
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 23px;
+    color: #fff;
+    text-shadow: 0 0 20px white;
+}
+
+#navbar a:hover
+{
+    background-color: rgb(20,20,20);
+    border-bottom: 3px solid white;
+    transition: ease-in-out;
+}

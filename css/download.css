@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body
+{
+    background-color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 23px;
+    color: #fff;
+    text-shadow: 0 0 20px white;
+    text-align: center;
+}
+
+#logo
+{
+    width : 18%;
+    padding-left: 80px;
+}
+
+#copyright 
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 23px;
+    color: rgb(54, 54, 54);
+    text-shadow: 0 0 20px rgb(54, 54, 54);
+    text-align: center;
+}
+
+footer
+{
+    margin-top : 40px;
+}
+
+#title
+{
+    padding-top : 20px;
+    padding-bottom: 40px;
+    font-size : 40px;
+    animation : fade 3s linear infinite;
+}
+
+@keyframes fade
+{
+    0%
+    {
+        color :rgb(255, 255, 255);
+    }
+    50%
+    {
+        color :rgb(0, 0, 0);
+    }
+    100%
+    {
+        color :rgb(255, 255, 255);
+    }
+}
+.btndiv
+{
+    margin-left : 512px;
+    margin-right : 512px;
+    margin-top : 30px;
+}
+
+#nxinfo
+{
+    color : rgb(54, 54, 54);
+    font-size: 22px;
+padding-top: 7px;
+}

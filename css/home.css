@@ -47,6 +47,11 @@ body
     color : rgb(71, 71, 71);
 }
 
+#navbar
+{
+    padding-left: 440px;
+}
+
 #logo
 {
     width : 18%;
@@ -73,15 +78,4 @@ footer
     font-size: 19px;
     color: rgb(143, 143, 143);
     text-shadow: 0 0 20px rgb(144, 144, 144);
-}
-
-#list
-{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 19px;
-    color: rgb(143, 143, 143);
-    text-shadow: 0 0 20px rgb(144, 144, 144);
-    position : absolute;
-    left : 26em;
-    top : 58em;
 }
